@@ -1,0 +1,16 @@
+<div>
+  <label>Task Name:<input type="text" class="form-control" [(ngModel)]="task.name" name="name"></label>
+  <br>
+  <label>Task Description:<input type="text" class="form-control" [(ngModel)]="task.description"
+      name="description"></label>
+  <br>
+  <label>Task Department ID:<input type="text" class="form-control" [(ngModel)]="task.department_id"
+      name="department_id"></label>
+  <br>
+  <label>Task Due Date:<input type="text" class="form-control" [(ngModel)]="task.due_date"
+      name="due_date"></label>
+  <br>
+  <button type="button" class="btn btn-success" (click)="add()">Add Task</button>
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+
+</div>

@@ -1,0 +1,35 @@
+label.deptDetails{
+  color: rgba(111,168,220,1)
+}
+.dept{
+  color: rgba(142,124,195,1);
+  background: rgba(246,178,107,0.7)
+
+}
+.actbtn {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 5px 5px 5px 0;
+  padding: 2px;
+  border: none;
+  font: normal 16px/1 Arial, Helvetica, sans-serif;
+  color: black;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #2ecc71;
+}
+.delbtn {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 5px 5px 5px 0;
+  padding: 2px;
+  border: none;
+  font: normal 16px/1 Arial, Helvetica, sans-serif;
+  color: black;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #ff0000;
+}
+

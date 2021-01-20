@@ -1,0 +1,21 @@
+<div class="container-fluid">
+<h2>Create Department</h2>
+
+<div>
+      <label>Name
+        <input type="text" class="form-control"  required [(ngModel)]="dept.name" name="name">
+      </label>
+    </div>
+
+    <div>
+      <label>Building
+        <input type="text" class="form-control" required [(ngModel)]="dept.building" name="building">
+      </label>
+
+    </div>
+    <button type="button" class="btn btn-warning"  routerLink="/depts">Go Back</button>
+    <button type="button" class="btn btn-success" (click)="save()">Add</button>
+  </div>
+
+
+

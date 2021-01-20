@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class='jumbotron text-center'>
+    <h1>Departments</h1>
+  </div>
+  <button type="button" class="btn btn-success" mat-raised-button (click)="openCreate()">Add Department</button>
+  <button type="button" class="btn btn-success" mat-raised-button (click)="openSearch()">Search Department</button>
+  Sort By:
+  <label class="radio-inline"><input type="radio" name="optradio" (click)="sortID()" checked>ID</label>
+  <label class="radio-inline"><input type="radio" (click)="sortDeptN()" name="optradio">Name</label>
+  <br>
+  <br>
+  <div *ngFor="let dept of depts">
+    <div class="row">
+      <div class="col-sm-2" style="background-color:lavender;" (click)="openDetails(dept)">{{dept.id}}</div>
+      <div class="col-sm-5" style="background-color:orange; " (click)="openDetails(dept)"> {{dept.name}}</div>
+      <button type="button" class="btn btn-danger" (click)="delete(dept.id)">Delete</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class='jumbotron text-center'>
+        <h1>{{title}}</h1>
+    </div>
+    <div class="container">
+        <h2>Tasks</h2>
+        <br>
+        <div class="row">
+            <div *ngFor="let task of tasks">
+                <div class="col-md-11" style="background-color:lavender;" (click)="openTaskDetails(task)">{{task.name}}</div>
+            </div>
+        </div>
+        <br>
+        <h2>Departments</h2>
+        <br>
+        <div class="row">
+            <div *ngFor="let dept of depts">
+                <div class="col-md-11" style="background-color:lavender;" (click)="openDeptDetails(dept)">{{dept.name}}</div>
+            </div>
+        </div>
+        <br>
+        <h2>Employees</h2>
+        <br>
+        <div class="row">
+            <div *ngFor="let employee of employees">
+                <div class="col-md-11" style="background-color:lavender;" (click)="openEmpDetails(employee)">{{employee.first_name}} {{employee.last_name}}</div>
+            </div>
+        </div>
+    </div>
+</div>

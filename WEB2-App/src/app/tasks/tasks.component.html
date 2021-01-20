@@ -1,0 +1,29 @@
+
+<div class="container-fluid">
+    <div class='jumbotron text-center'><h1>Tasks</h1></div>
+
+        <br>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8"> 
+              <div *ngFor="let task of tasks">
+                <div class="row">
+                  <div class="col-md-1" style="background-color:lavender;" routerLink="/taskDetail/{{task.id}}" routerLinkActive="router-link-active" >{{task.id}}</div>
+                  <div class="col-md-5" style="background-color:orange; "routerLink="/taskDetail/{{task.id}}" routerLinkActive="router-link-active"> {{task.name}}</div>
+                  <button type="button" class="btn btn-danger" (click)="delete(task)">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1">
+             <label>Task name:<input #taskName /></label>
+              <br>
+              <label>Task's department ID:<input #depID /></label>
+              <br>
+             <label>Task due date:<input #taskDate /></label>
+             <br>
+             <button type="button" class="btn btn-success" (click)="add(taskName.value, depID.value, taskDate.value); taskName.value=''; depID.value=''; taskDate.value=''">Add Task</button>
+            </div>
+          </div>
+        </div>
+</div>

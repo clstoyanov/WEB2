@@ -1,0 +1,18 @@
+<div class="container-fluid">
+<div class='jumbotron text-center'><h1>Departments</h1></div>
+    <button type="button" class="btn btn-success" routerLink="/add">Add Department</button>
+    <br>
+    <br>
+    <div *ngFor="let dept of depts">
+
+
+    <div class="row">
+      <div class="col-sm-2" style="background-color:lavender;" routerLink="/deptdetail/{{dept.id}}" routerLinkActive="router-link-active" >{{dept.id}}</div>
+      <div class="col-sm-5" style="background-color:orange; "routerLink="/deptdetail/{{dept.id}}" routerLinkActive="router-link-active"> {{dept.name}}</div>
+      <button type="button" class="btn btn-danger" (click)="delete(dept.id)">Delete</button>
+    </div>
+
+  </div>
+
+
+

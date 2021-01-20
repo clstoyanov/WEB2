@@ -1,0 +1,15 @@
+<label>Employee First Name:<input type="text" class="form-control" required [(ngModel)]="emp.first_name"
+    name="first_name"></label>
+<br>
+<label>Employee Last Name:<input type="text" class="form-control" required [(ngModel)]="emp.last_name"
+    name="last_name"></label>
+<br>
+<label>Employee Department ID:<input type="text" class="form-control" required [(ngModel)]="emp.department_id"
+    name="department_id"></label>
+<br>
+<label>Employee Date of Birth:<input type="text" class="form-control" required [(ngModel)]="emp.birth_date"
+    name="birth_date"></label>
+<br>
+<button type="button" class="btn btn-success" (click)="add()">
+  Add Employee</button>
+<button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>

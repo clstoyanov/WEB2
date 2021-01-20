@@ -1,0 +1,31 @@
+
+<div class="container-fluid">
+    <div class='jumbotron text-center'><h1>Employees</h1></div>
+        <br>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div *ngFor="let employee of employees">
+                <div class="row">
+                  <div class="col-md-1" style="background-color:lavender;" routerLink="/employeeDetail/{{employee.id}}" routerLinkActive="router-link-active" >{{employee.id}}</div>
+                  <div class="col-md-5" style="background-color:orange; "routerLink="/employeeDetail/{{employee.id}}" routerLinkActive="router-link-active"> {{employee.first_name}} {{employee.last_name}}</div>
+                  <button type="button" class="btn btn-danger" (click)="delete(employee)">Delete</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1">
+              <label>Employee First Name:<input #employeeFirstName /></label>
+              <br>
+              <label>Employee Last Name:<input #employeeLastName /></label>
+              <br>
+              <label>Employee Department ID:<input #employeeDepID /></label>
+              <br>
+              <label>Employee Date of Birth:<input #employeeDoB /></label>
+              <br>
+              <button type="button" class="btn btn-success" (click)="add(employeeFirstName.value, employeeLastName.value, employeeDepID.value, employeeDoB.value); employeeFirstName.value=''; employeeLastName.value=''; employeeDepID.value=''; employeeDoB.value=''"> Add Employee</button>
+            </div>
+          </div>
+        </div>
+</div>
+

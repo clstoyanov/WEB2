@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class='jumbotron text-center'>
+    <h1>Employees</h1>
+  </div>
+  <button type="button" class="btn btn-success" mat-raised-button (click)="openCreate()">Add Employee</button>
+  <button type="button" class="btn btn-success" mat-raised-button (click)="openSearch()">Search Employee</button>
+
+  Sort By:
+  <label class="radio-inline"><input type="radio" name="optradio" (click)="sortID()" checked>ID</label>
+  <label class="radio-inline"><input type="radio" (click)="sortLN()" name="optradio">Last Name</label>
+  <label class="radio-inline"><input type="radio" (click)="sortFN()" name="optradio">First Name</label>
+  <br>
+  <br>
+  <div *ngFor="let employee of employees">
+    <div class="row">
+      <div class="col-sm-2" style="background-color:lavender;" (click)="openDetails(employee)">{{employee.id}}</div>
+      <div class="col-sm-5" style="background-color:orange; " (click)="openDetails(employee)"> {{employee.first_name}}
+        {{employee.last_name}}</div>
+      <button type="button" class="btn btn-danger" (click)="delete(employee)">Delete</button>
+    </div>
+  </div>

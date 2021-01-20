@@ -1,0 +1,35 @@
+<div class="container-fluid">
+<div *ngIf="dept">
+	<h2>{{dept.name}}'s Details</h2>
+<div><span>id: </span>{{dept.id}}</div>
+<div>
+	<label>Name:
+		<input type="text" class="form-control" [(ngModel)]="dept.name" placeholder="Name"/>
+	</label>
+</div>
+<div>
+	<label>Building:
+		<input type="text" class="form-control" [(ngModel)]="dept.building" placeholder="Buliding"/>
+	</label>
+</div>
+<div>
+	<label>Employees:
+
+	</label>
+</div>
+
+<div *ngFor="let employee of employees">
+
+
+    <div class="row">
+      <div class="col-sm-2" style="background-color:lavender;" routerLink="/employeeDetail/{{employee.id}}" routerLinkActive="router-link-active" >{{employee.id}}</div>
+      <div class="col-sm-5" style="background-color:orange; "routerLink="/employeeDetail/{{employee.id}}" routerLinkActive="router-link-active">{{employee.first_name}} {{employee.last_name}}</div>
+    </div>
+
+  </div>
+
+	<button type="button" class="btn btn-warning"  routerLink="/depts">Go Back</button>
+	<button type="button" class="btn btn-success" (click)="save()" >Save</button>
+</div>
+</div>
+

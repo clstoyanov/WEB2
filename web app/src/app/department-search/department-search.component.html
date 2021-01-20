@@ -1,0 +1,19 @@
+<div class="container-fluid">
+<h1> Search Departments </h1>
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Search by Name"
+  [(ngModel)]="searchTerm" />
+  </div>
+
+
+<div *ngFor="let dept of filteredDepartments">
+  <div class="row">
+    <div class="col-sm-2" style="background-color:lavender;" >{{dept.id}}</div>
+    <div class="col-sm-5" style="background-color:orange; "> {{dept.name}}</div>
+
+  </div>
+</div>
+<button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+
+</div>
+

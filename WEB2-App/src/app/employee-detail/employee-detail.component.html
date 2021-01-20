@@ -1,0 +1,38 @@
+
+
+<div class="container-fluid">
+    <div *ngIf="employee">
+      <h2>{{employee.first_name}} {{employee.last_name}}'s Details</h2>
+    <div><span>id: </span>{{employee.id}}</div>
+    <div>
+
+
+        <label>First Name:
+		<input type="text" class="form-control" [(ngModel)]="employee.first_name" placeholder="First Name"/>
+	</label>
+</div>
+<div>
+	<label>Last Name:
+		<input type="text" class="form-control" [(ngModel)]="employee.last_name" placeholder="Last Name"/>
+	</label>
+</div>
+<div>
+	<label>First Name:
+		<input type="text" class="form-control" [(ngModel)]="employee.first_name" placeholder="First Name"/>
+	</label>
+</div>
+<div>
+	<label>Department ID:
+		<input type="text" class="form-control" [(ngModel)]="employee.department_id" placeholder="Department ID"/>
+	</label>
+</div>
+<div>
+	<label>Date of Birth:
+		<input type="text" class="form-control" [(ngModel)]="employee.birth_date" placeholder="Date of Birth"/>
+	</label>
+</div>
+
+      </div>
+      <button type="button" class="btn btn-warning"  routerLink="/tasks">Go Back</button>
+      <button type="button" class="btn btn-success" (click)="save()" >Save</button>
+      </div>

@@ -1,0 +1,48 @@
+h1 {
+  font: normal 16px/1 Arial, Helvetica, sans-serif;
+color: rgba(5,25,255,1);
+text-align: center;
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+}
+nav a {
+  font-size: 1.5em;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #334953;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+
+a{
+  font-size: 2em;
+  padding: 5px;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+a:visited, a:link {
+  color: #334953;
+}
+
+a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+
+a.active {
+  color: #039be5;
+}

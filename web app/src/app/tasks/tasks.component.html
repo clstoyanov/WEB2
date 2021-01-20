@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class='jumbotron text-center'>
+    <h1>Tasks</h1>
+  </div>
+  <button type="button" class="btn btn-success" mat-raised-button (click)="openCreate()">Add Task</button>
+  <button type="button" class="btn btn-success" mat-raised-button (click)="openSearch()">Search Task</button>
+
+  Sort By:
+  <label class="radio-inline"><input type="radio" name="optradio" (click)="sortID()" checked>ID</label>
+  <label class="radio-inline"><input type="radio" (click)="sortTaskN()" name="optradio">Name</label>
+  <br>
+  <br>
+  <div *ngFor="let task of tasks">
+    <div class="row">
+      <div class="col-sm-2" style="background-color:lavender;" (click)="openDetails(task)">{{task.id}}</div>
+      <div class="col-sm-5" style="background-color:orange; " (click)="openDetails(task)">{{task.name}}</div>
+      <button type="button" class="btn btn-danger" (click)="delete(task)">Delete</button>
+    </div>
+  </div>
